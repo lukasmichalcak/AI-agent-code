@@ -1,0 +1,148 @@
+{
+  "checkedAt": "2026-10-04T06:54:54.188Z",
+  "versions": {
+    "lifi": "4.10.0",
+    "paraspell": "14.4.0",
+    "wormhole": "6.1.5"
+  },
+  "paraspellAssets": {
+    "pair": "AssetHubPaseo -> PeoplePaseo",
+    "assets": [
+      {
+        "symbol": "PAS",
+        "decimals": 10
+      }
+    ],
+    "pasDestinations": [
+      "HydrationPaseo",
+      "PeoplePaseo",
+      "Paseo"
+    ]
+  },
+  "paraspellBalance": "75459876616612",
+  "paraspellFee": {
+    "success": true,
+    "origin": {
+      "weight": {
+        "refTime": "1299888685",
+        "proofSize": "12342"
+      },
+      "fee": "315345638",
+      "feeType": "dryRun",
+      "sufficient": true,
+      "asset": {
+        "symbol": "PAS",
+        "isNative": true,
+        "decimals": 10,
+        "existentialDeposit": "100000000",
+        "location": {
+          "parents": 1,
+          "interior": {
+            "Here": null
+          }
+        },
+        "isFeeAsset": true
+      }
+    },
+    "destination": {
+      "fee": "3168127",
+      "feeType": "dryRun",
+      "sufficient": true,
+      "asset": {
+        "symbol": "PAS",
+        "isNative": true,
+        "decimals": 10,
+        "existentialDeposit": "1000000000",
+        "location": {
+          "parents": 1,
+          "interior": {
+            "Here": null
+          }
+        },
+        "isFeeAsset": true,
+        "amount": "10000000000"
+      }
+    },
+    "hops": []
+  },
+  "paraspellDryRun": {
+    "success": true,
+    "origin": true,
+    "destination": true
+  },
+  "paraspellTransferInfo": {
+    "fields": [
+      "chain",
+      "origin",
+      "hops",
+      "destination"
+    ],
+    "receivedAmount": "9996831873"
+  },
+  "lifiTestnets": [
+    {
+      "id": 11155111,
+      "name": "Ethereum Sepolia Testnet"
+    },
+    {
+      "id": 11155420,
+      "name": "OP Sepolia Testnet"
+    },
+    {
+      "id": 421614,
+      "name": "Arbitrum Sepolia Testnet"
+    },
+    {
+      "id": 5042002,
+      "name": "Arc Testnet"
+    },
+    {
+      "id": 84532,
+      "name": "Base Sepolia Testnet"
+    }
+  ],
+  "lifiTestnetConnections": {
+    "pair": "Arc Testnet -> OP Sepolia",
+    "count": 0
+  },
+  "lifiQuote": {
+    "fromAmount": "1000000",
+    "toAmount": "993818",
+    "feeCosts": [
+      {
+        "name": "LIFI Fixed Fee",
+        "token": "USDC",
+        "amount": "2500",
+        "included": true
+      },
+      {
+        "name": "Relayer fee",
+        "token": "USDC",
+        "amount": "99",
+        "included": true
+      },
+      {
+        "name": "Relayer gas fee",
+        "token": "USDC",
+        "amount": "3583",
+        "included": true
+      }
+    ],
+    "gasCosts": [
+      {
+        "token": "ETH",
+        "amount": "4161411612000",
+        "amountUSD": "0.0109"
+      }
+    ],
+    "transactionRequestPresent": true
+  },
+  "wormhole": {
+    "network": "Testnet",
+    "getBalance": "function",
+    "supportedDestinationTokens": "function",
+    "supportedSourceTokens": "undefined",
+    "sortRoutes": "undefined",
+    "nativeSepoliaBalance": "2707964733904057681170"
+  }
+}
