@@ -28,6 +28,9 @@ Without the ID, the connector is omitted and injected wallets remain usable. All
 
 ## What works
 
+- Chat-first workspace with conversation history on the right (a History drawer on smaller screens). Messages, unsent drafts, exact transfer fields, and review state are independent for each conversation and saved in this browser's local storage. If storage is unavailable, the session still works in memory.
+- Separate Chat, Transfer details, Review, Plans, Progress, and Wallet views. Switching changes local React state; all panels are bundled and remain mounted, with no navigation, fetch, loading screen, or transition delay. Wallet polling is independent of view switching.
+- Chat currently saves the latest message as the request goal and returns a fixed guidance message. It does not call an LLM or infer transfer fields; the exact details still need manual input and review.
 - Wagmi v3 connection hooks with Viem and React Query providers; injected EVM wallet and optional WalletConnect (including its required Ethereum provider package).
 - Base Sepolia (84532) and Arbitrum Sepolia (421614), using maintained Viem chain definitions and public RPC URLs. Both use native ETH. These are testnets only.
 - Live address, connector, connection state, supported/unsupported chain, disconnect and network switching. Account/network changes update the wallet display without rewriting the manually chosen request.

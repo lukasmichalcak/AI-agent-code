@@ -1,15 +1,13 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { supportedChains } from '../domain/chains'
-import { createIntent, initialFields, validateRequest, type RequestFields, type RequestErrors } from '../domain/request'
+import { createIntent, validateRequest, type RequestFields, type RequestErrors } from '../domain/request'
 import type { TransferIntent } from '../domain/types'
 
-export function RequestForm({ onReview, onEdit, connectedAddress }: { onReview: (intent: TransferIntent) => void; onEdit: () => void; connectedAddress?: string }) {
-  const [fields, setFields] = useState(initialFields)
+export function RequestForm({ fields, onChange, onReview, connectedAddress }: { fields: RequestFields; onChange: (fields: RequestFields) => void; onReview: (intent: TransferIntent) => void; connectedAddress?: string }) {
   const [errors, setErrors] = useState<RequestErrors>({})
   function update<K extends keyof RequestFields>(key: K, value: RequestFields[K]) {
-    setFields(current => ({ ...current, [key]: value }))
+    onChange({ ...fields, [key]: value })
     setErrors(current => ({ ...current, [key]: undefined }))
-    onEdit()
   }
   function submit(event: FormEvent) {
     event.preventDefault()
@@ -42,11 +40,10 @@ export function RequestForm({ onReview, onEdit, connectedAddress }: { onReview: 
     return field(key, side === 'source' ? 'Source chain' : 'Destination chain', <select id={key} value={fields[key]} onChange={event => update(key, event.target.value)} aria-invalid={!!errors[key]} aria-describedby={`${key}-error`}>{supportedChains.map(chain => <option value={chain.id} key={chain.id}>{chain.name}</option>)}</select>)
   }
   return <form onSubmit={submit} noValidate>
-    <section className="panel task-panel"><div className="section-heading"><span className="step-number">01</span><div><h2>What would you like to do?</h2><p>Describe your goal, then enter the exact details below.</p></div></div>
+    <details className="panel task-panel"><summary>Request context</summary><p className="muted">Your chat goal is kept here. It does not automatically populate transfer fields.</p>
       <label htmlFor="naturalLanguage" className="sr-only">Natural-language task</label>
       <textarea id="naturalLanguage" rows={3} value={fields.naturalLanguage} onChange={event => update('naturalLanguage', event.target.value)} placeholder="For example: Send 2 USDC from Base to Arbitrum and keep the total cost below $1." aria-describedby="task-help" />
-      <small id="task-help">Saved with your request for the future agent. Text is not parsed in this milestone; the fields below are entered manually. This demo uses testnets.</small>
-    </section>
+    </details>
     <section className="panel"><div className="section-heading"><span className="step-number">02</span><div><h2>Transfer details</h2><p>Choose where your assets start and where they should arrive.</p></div></div>
       <div className="transfer-columns"><div className="asset-column"><h3>From</h3>{chain('source')}{assets('source')}{field('amount', 'Amount to send', input('amount', '0.00', true), 'Amount in source token units; fees are not yet known.')}</div><div className="asset-column"><h3>To</h3>{chain('destination')}{assets('destination')}{field('recipient', 'Recipient address', input('recipient', '0x…'), 'The EVM address that receives the destination asset.')}{connectedAddress && <button type="button" className="text-button" onClick={() => update('recipient', connectedAddress)}>Use connected address</button>}</div></div>
       <div className="constraints"><h3>Your constraints</h3><p className="muted">These are limits you request, not estimates or guarantees.</p><div className="two-columns">{field('maximumFeeUsd', 'Maximum total fee (USD, optional)', input('maximumFeeUsd', 'e.g. 1.00', true), 'Future plans must compare all fees and gas using explicit USD valuations.')}{field('minimumReceived', 'Minimum received (optional)', input('minimumReceived', 'e.g. 1.95', true), 'In units of the chosen destination asset.')}</div>
