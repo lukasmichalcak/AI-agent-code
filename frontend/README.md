@@ -2,6 +2,8 @@
 
 A modest React + TypeScript + Vite frontend for an AI agent-based blockchain interoperability router. The previously empty workspace had no frontend, lockfile, or applicable AGENTS.md instructions. npm is the package manager; commit `package-lock.json` with the source.
 
+For the detailed architecture, file structure, data flows, validation rules, test evidence, limitations and integration roadmap, see [Frontend analysis](../FRONTEND_ANALYSIS.md).
+
 ## Run locally
 
 Use Node.js 22.12+ (tested with 24.13.1) and npm.

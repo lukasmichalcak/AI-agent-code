@@ -1,0 +1,70 @@
+{
+  "checkedAt": "2026-10-07T08:21:26.120Z",
+  "sdk": "@lifi/sdk@4.10.0",
+  "steps": {
+    "testnets": [
+      {
+        "id": 11155111,
+        "name": "Ethereum Sepolia Testnet"
+      },
+      {
+        "id": 11155420,
+        "name": "OP Sepolia Testnet"
+      },
+      {
+        "id": 421614,
+        "name": "Arbitrum Sepolia Testnet"
+      },
+      {
+        "id": 5042002,
+        "name": "Arc Testnet"
+      },
+      {
+        "id": 84532,
+        "name": "Base Sepolia Testnet"
+      }
+    ],
+    "testnetConnections": {
+      "fromChain": 5042002,
+      "toChain": 11155420,
+      "count": 0
+    },
+    "quote": {
+      "tool": "across",
+      "fromAmount": "1000000",
+      "toAmount": "993824",
+      "toAmountMin": "993824",
+      "feeCosts": [
+        {
+          "name": "LIFI Fixed Fee",
+          "token": "USDC",
+          "amount": "2500",
+          "amountUSD": "0.0025",
+          "included": true
+        },
+        {
+          "name": "Relayer fee",
+          "token": "USDC",
+          "amount": "99",
+          "amountUSD": "0.0001",
+          "included": true
+        },
+        {
+          "name": "Relayer gas fee",
+          "token": "USDC",
+          "amount": "3577",
+          "amountUSD": "0.0036",
+          "included": true
+        }
+      ],
+      "gasCosts": [
+        {
+          "token": "ETH",
+          "amount": "4162963752000",
+          "amountUSD": "0.0109"
+        }
+      ],
+      "unsignedTransactionRequestPresent": true
+    }
+  }
+}

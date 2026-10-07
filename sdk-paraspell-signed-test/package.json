@@ -1,0 +1,14 @@
+{
+  "name": "paraspell-paseo-signed-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.19.0" },
+  "dependencies": {
+    "@paraspell/sdk": "14.4.0",
+    "@paraspell/descriptors": "14.4.0",
+    "polkadot-api": "3.2.1",
+    "@polkadot-labs/hdkd": "0.0.32",
+    "@polkadot-labs/hdkd-helpers": "0.0.34"
+  }
+}

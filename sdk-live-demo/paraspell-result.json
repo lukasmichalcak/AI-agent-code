@@ -1,0 +1,177 @@
+{
+  "checkedAt": "2026-10-07T08:31:39.755Z",
+  "sdk": "@paraspell/sdk@14.4.0",
+  "origin": "AssetHubPaseo",
+  "destination": "PeoplePaseo",
+  "token": "PAS",
+  "amountBaseUnits": "10000000000",
+  "address": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+  "steps": {
+    "assetsAndDestinations": {
+      "supportedAssets": [
+        {
+          "symbol": "PAS",
+          "decimals": 10
+        }
+      ],
+      "pasDestinations": [
+        "HydrationPaseo",
+        "PeoplePaseo",
+        "Paseo"
+      ]
+    },
+    "balanceBaseUnits": "75459876616612",
+    "fee": {
+      "success": true,
+      "origin": {
+        "weight": {
+          "refTime": "1299888685",
+          "proofSize": "12342"
+        },
+        "fee": "315345638",
+        "feeType": "dryRun",
+        "sufficient": true,
+        "asset": {
+          "symbol": "PAS",
+          "isNative": true,
+          "decimals": 10,
+          "existentialDeposit": "100000000",
+          "location": {
+            "parents": 1,
+            "interior": {
+              "Here": null
+            }
+          },
+          "isFeeAsset": true
+        }
+      },
+      "destination": {
+        "fee": "3168127",
+        "feeType": "dryRun",
+        "sufficient": true,
+        "asset": {
+          "symbol": "PAS",
+          "isNative": true,
+          "decimals": 10,
+          "existentialDeposit": "1000000000",
+          "location": {
+            "parents": 1,
+            "interior": {
+              "Here": null
+            }
+          },
+          "isFeeAsset": true,
+          "amount": "10000000000"
+        }
+      },
+      "hops": []
+    },
+    "unsignedBuild": {
+      "built": true,
+      "encodedCallHex": "0x1f0905010100b10f0500010100d43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d05040100000700e40b54020000000000",
+      "availableMethods": [
+        "getPaymentInfo",
+        "getEstimatedFees",
+        "getEncodedData",
+        "getBareTx",
+        "create",
+        "createSubmitAndWatch",
+        "createAndSubmit"
+      ]
+    },
+    "dryRun": {
+      "success": true,
+      "originSuccess": true,
+      "destinationSuccess": true
+    },
+    "transferInfo": {
+      "fields": [
+        "chain",
+        "origin",
+        "hops",
+        "destination"
+      ],
+      "receivedAmountBaseUnits": "9996831873",
+      "origin": {
+        "selectedCurrency": {
+          "sufficient": true,
+          "balance": "75459876616612",
+          "balanceAfter": "75449876616612",
+          "asset": {
+            "symbol": "PAS",
+            "isNative": true,
+            "decimals": 10,
+            "existentialDeposit": "100000000",
+            "location": {
+              "parents": 1,
+              "interior": {
+                "Here": null
+              }
+            },
+            "isFeeAsset": true
+          }
+        },
+        "xcmFee": {
+          "sufficient": true,
+          "fee": "315345638",
+          "balance": "75459876616612",
+          "balanceAfter": "75459561270974",
+          "asset": {
+            "symbol": "PAS",
+            "isNative": true,
+            "decimals": 10,
+            "existentialDeposit": "100000000",
+            "location": {
+              "parents": 1,
+              "interior": {
+                "Here": null
+              }
+            },
+            "isFeeAsset": true
+          }
+        }
+      },
+      "hops": [],
+      "destination": {
+        "receivedCurrency": {
+          "sufficient": true,
+          "receivedAmount": "9996831873",
+          "balance": "6589996217253",
+          "balanceAfter": "6599993049126",
+          "asset": {
+            "symbol": "PAS",
+            "isNative": true,
+            "decimals": 10,
+            "existentialDeposit": "1000000000",
+            "location": {
+              "parents": 1,
+              "interior": {
+                "Here": null
+              }
+            },
+            "isFeeAsset": true
+          }
+        },
+        "xcmFee": {
+          "fee": "3168127",
+          "balance": "6589996217253",
+          "balanceAfter": "6599993049126",
+          "asset": {
+            "symbol": "PAS",
+            "isNative": true,
+            "decimals": 10,
+            "existentialDeposit": "1000000000",
+            "location": {
+              "parents": 1,
+              "interior": {
+                "Here": null
+              }
+            },
+            "isFeeAsset": true,
+            "amount": "10000000000"
+          }
+        }
+      }
+    }
+  }
+}
