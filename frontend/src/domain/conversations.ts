@@ -23,8 +23,11 @@ function isConversation(value: unknown): value is Conversation {
   if (typeof item.id !== 'string' || !item.id || typeof item.draft !== 'string' || typeof item.reviewed !== 'boolean' || typeof item.updatedAt !== 'string') return false
   if (!item.fields || typeof item.fields !== 'object') return false
   const fields = item.fields as Record<string, unknown>
+  // Migrate v1 conversations written before duration/preference were available.
+  if (fields.maximumDurationSeconds === undefined) fields.maximumDurationSeconds = ''
+  if (fields.preference === undefined) fields.preference = 'cost'
   if (!Object.entries(initialFields).every(([key, defaultValue]) => typeof fields[key] === typeof defaultValue)) return false
-  if (!['native', 'erc20'].includes(String(fields.sourceKind)) || !['native', 'erc20'].includes(String(fields.destinationKind))) return false
+  if (!['native', 'erc20', 'substrate'].includes(String(fields.sourceKind)) || !['native', 'erc20', 'substrate'].includes(String(fields.destinationKind))) return false
   if (!Array.isArray(item.messages) || !item.messages.every(message => message && typeof message.id === 'string' && ['user', 'assistant'].includes(message.role) && typeof message.text === 'string')) return false
   return !item.reviewed || Object.keys(validateRequest(fields as unknown as RequestFields)).length === 0
 }

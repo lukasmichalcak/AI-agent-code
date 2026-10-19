@@ -1,0 +1,42 @@
+{
+  "mode": "two-role",
+  "inputTrack": "natural_language",
+  "distinctTasks": 3,
+  "applicableRuns": 3,
+  "notApplicableRuns": 0,
+  "meanPerTaskSuccessRate": 0.6666666666666666,
+  "tasksSuccessfulInEveryRun": 2,
+  "meanLatencySeconds": 25.06708924599995,
+  "totalModelOutputTokens": 377,
+  "totalModelInputTokens": 6811,
+  "toolErrors": 0,
+  "perTask": [
+    {
+      "scenarioId": "01-native",
+      "runs": 1,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "02-paseo-sk",
+      "runs": 1,
+      "successRate": 0.0,
+      "allRunsSuccessful": false,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "04-ambiguous-token",
+      "runs": 1,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture results are not transfer success or live routing reliability.",
+    "Structured-form baselines do not measure natural-language interpretation.",
+    "Repeated attempts on a task are not independent tasks.",
+    "No dollar inference cost or energy was measured."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "mode": "provider:paraspell",
+  "inputTrack": "structured_form",
+  "distinctTasks": 1,
+  "applicableRuns": 1,
+  "notApplicableRuns": 19,
+  "meanPerTaskSuccessRate": 1.0,
+  "tasksSuccessfulInEveryRun": 1,
+  "meanLatencySeconds": 0.0014713959999426152,
+  "totalModelOutputTokens": 0,
+  "totalModelInputTokens": 0,
+  "toolErrors": 0,
+  "perTask": [
+    {
+      "scenarioId": "02-paseo-sk",
+      "runs": 1,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture results are not transfer success or live routing reliability.",
+    "Structured-form baselines do not measure natural-language interpretation.",
+    "Repeated attempts on a task are not independent tasks.",
+    "No dollar inference cost or energy was measured."
+  ]
+}

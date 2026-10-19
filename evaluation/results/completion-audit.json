@@ -1,0 +1,2784 @@
+{
+  "auditVersion": "completion-v1",
+  "note": "Retrospective process-completion metric added after initial results; original outcomes, traces and workflowSuccess remain unchanged. This is exploratory, not a preregistered benchmark.",
+  "runs": [
+    {
+      "directory": "20261011T183114-deterministic-qwen3.5-4b",
+      "mode": "deterministic",
+      "distinctTasks": 20,
+      "applicableRuns": 20,
+      "originalWorkflowSuccessfulRuns": 20,
+      "completeWorkflowSuccessfulRuns": 20,
+      "systemOutcomeCorrectRuns": 20,
+      "meanLatencySeconds": 0.00045562734998156885,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184034-two-role-qwen3.5-4b",
+      "mode": "two-role",
+      "distinctTasks": 3,
+      "applicableRuns": 3,
+      "originalWorkflowSuccessfulRuns": 1,
+      "completeWorkflowSuccessfulRuns": 1,
+      "systemOutcomeCorrectRuns": 1,
+      "meanLatencySeconds": 32.83399320200002,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184057-deterministic-qwen3.5-4b",
+      "mode": "deterministic",
+      "distinctTasks": 20,
+      "applicableRuns": 60,
+      "originalWorkflowSuccessfulRuns": 60,
+      "completeWorkflowSuccessfulRuns": 60,
+      "systemOutcomeCorrectRuns": 60,
+      "meanLatencySeconds": 0.0007294055666837569,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184408-provider-lifi-qwen3.5-4b",
+      "mode": "provider:lifi",
+      "distinctTasks": 16,
+      "applicableRuns": 16,
+      "originalWorkflowSuccessfulRuns": 16,
+      "completeWorkflowSuccessfulRuns": 16,
+      "systemOutcomeCorrectRuns": 16,
+      "meanLatencySeconds": 0.0016115555625191291,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184408-provider-paraspell-qwen3.5-4b",
+      "mode": "provider:paraspell",
+      "distinctTasks": 1,
+      "applicableRuns": 1,
+      "originalWorkflowSuccessfulRuns": 1,
+      "completeWorkflowSuccessfulRuns": 1,
+      "systemOutcomeCorrectRuns": 1,
+      "meanLatencySeconds": 0.0014713959999426152,
+      "details": [
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184409-provider-wormhole-qwen3.5-4b",
+      "mode": "provider:wormhole",
+      "distinctTasks": 1,
+      "applicableRuns": 1,
+      "originalWorkflowSuccessfulRuns": 0,
+      "completeWorkflowSuccessfulRuns": 0,
+      "systemOutcomeCorrectRuns": 0,
+      "meanLatencySeconds": 0.005117276999953901,
+      "details": [
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184506-two-role-qwen3.5-4b",
+      "mode": "two-role",
+      "distinctTasks": 3,
+      "applicableRuns": 3,
+      "originalWorkflowSuccessfulRuns": 0,
+      "completeWorkflowSuccessfulRuns": 0,
+      "systemOutcomeCorrectRuns": 0,
+      "meanLatencySeconds": 27.40566668200002,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184828-two-role-qwen3.5-4b",
+      "mode": "two-role",
+      "distinctTasks": 3,
+      "applicableRuns": 3,
+      "originalWorkflowSuccessfulRuns": 2,
+      "completeWorkflowSuccessfulRuns": 2,
+      "systemOutcomeCorrectRuns": 2,
+      "meanLatencySeconds": 25.06708924599995,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T184944-two-role-qwen3.5-4b",
+      "mode": "two-role",
+      "distinctTasks": 8,
+      "applicableRuns": 8,
+      "originalWorkflowSuccessfulRuns": 4,
+      "completeWorkflowSuccessfulRuns": 3,
+      "systemOutcomeCorrectRuns": 7,
+      "meanLatencySeconds": 46.952207632124896,
+      "details": [
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": false,
+          "workflowCompleted": false,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T185151-deterministic-qwen3.5-4b",
+      "mode": "deterministic",
+      "distinctTasks": 20,
+      "applicableRuns": 60,
+      "originalWorkflowSuccessfulRuns": 60,
+      "completeWorkflowSuccessfulRuns": 60,
+      "systemOutcomeCorrectRuns": 60,
+      "meanLatencySeconds": 0.0008250300666986732,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T185751-single-agent-qwen3.5-4b",
+      "mode": "single-agent",
+      "distinctTasks": 8,
+      "applicableRuns": 8,
+      "originalWorkflowSuccessfulRuns": 5,
+      "completeWorkflowSuccessfulRuns": 3,
+      "systemOutcomeCorrectRuns": 8,
+      "meanLatencySeconds": 60.39485057362498,
+      "details": [
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": false,
+          "workflowCompleted": false,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": false,
+          "workflowCompleted": false,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T190844-two-role-qwen3.5-4b",
+      "mode": "two-role",
+      "distinctTasks": 3,
+      "applicableRuns": 9,
+      "originalWorkflowSuccessfulRuns": 6,
+      "completeWorkflowSuccessfulRuns": 6,
+      "systemOutcomeCorrectRuns": 6,
+      "meanLatencySeconds": 19.442792301888858,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": true,
+          "agentFinishObserved": true,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 1,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 2,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T191211-two-role-qwen3.5-2b-q4_K_M",
+      "mode": "two-role",
+      "distinctTasks": 3,
+      "applicableRuns": 9,
+      "originalWorkflowSuccessfulRuns": 3,
+      "completeWorkflowSuccessfulRuns": 3,
+      "systemOutcomeCorrectRuns": 3,
+      "meanLatencySeconds": 8.9279358805555,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 1,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 2,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 1,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 2,
+          "originalWorkflowSuccess": false,
+          "systemOutcomeCorrect": false,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": false
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    },
+    {
+      "directory": "20261011T192003-deterministic-qwen3.5-4b",
+      "mode": "deterministic",
+      "distinctTasks": 20,
+      "applicableRuns": 60,
+      "originalWorkflowSuccessfulRuns": 60,
+      "completeWorkflowSuccessfulRuns": 60,
+      "systemOutcomeCorrectRuns": 60,
+      "meanLatencySeconds": 0.00038931175002592986,
+      "details": [
+        {
+          "scenarioId": "01-native",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "01-native",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "02-paseo-sk",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "03-usdc",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "04-ambiguous-token",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "05-missing-recipient",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "06-insufficient-input",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "07-insufficient-gas",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "08-stale",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "09-expired",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "10-fee-cap",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "11-unknown-usd",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "12-forbid-wrapped",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "13-tool-injection",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "14-changed-input",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "15-time-limit",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "16-minimum-output",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "17-wrong-chain",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "18-speed-choice",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "19-provider-outage",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 0,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 1,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        },
+        {
+          "scenarioId": "20-unsupported",
+          "repeat": 2,
+          "originalWorkflowSuccess": true,
+          "systemOutcomeCorrect": true,
+          "agentFinishRequired": false,
+          "agentFinishObserved": false,
+          "workflowCompleted": true,
+          "completeWorkflowSuccess": true
+        }
+      ]
+    }
+  ]
+}

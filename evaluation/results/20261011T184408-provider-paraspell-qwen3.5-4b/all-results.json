@@ -1,0 +1,295 @@
+[
+  {
+    "scenarioId": "01-native",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "02-paseo-sk",
+    "repeat": 0,
+    "applicable": true,
+    "language": "sk",
+    "riskTags": [],
+    "latencySeconds": 0.0014713959999426152,
+    "modelOutputTokens": 0,
+    "modelInputTokens": 0,
+    "toolCalls": 2,
+    "toolErrors": 0,
+    "outcome": {
+      "status": "ready",
+      "message": "Read-only candidates validated for review. No transaction is signed or submitted.",
+      "intent": {
+        "id": "dataset",
+        "naturalLanguage": "Po\u0161li 1 nat\u00edvny PAS (10 desatinn\u00fdch miest, native:PAS) z AssetHubPaseo do PeoplePaseo na 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY.",
+        "sourceAsset": {
+          "chain": {
+            "ecosystem": "substrate",
+            "name": "AssetHubPaseo"
+          },
+          "kind": "substrate",
+          "symbol": "PAS",
+          "decimals": 10,
+          "assetIdentifier": "native:PAS"
+        },
+        "destinationAsset": {
+          "chain": {
+            "ecosystem": "substrate",
+            "name": "PeoplePaseo"
+          },
+          "kind": "substrate",
+          "symbol": "PAS",
+          "decimals": 10,
+          "assetIdentifier": "native:PAS"
+        },
+        "amount": "1",
+        "recipient": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+        "constraints": {
+          "allowWrapped": false,
+          "preference": "cost"
+        }
+      },
+      "candidates": [
+        {
+          "id": "pas",
+          "intentId": "dataset",
+          "provider": "paraspell",
+          "sourceAsset": {
+            "chain": {
+              "ecosystem": "substrate",
+              "name": "AssetHubPaseo"
+            },
+            "kind": "substrate",
+            "symbol": "PAS",
+            "decimals": 10,
+            "assetIdentifier": "native:PAS"
+          },
+          "sourceInput": {
+            "asset": {
+              "chain": {
+                "ecosystem": "substrate",
+                "name": "AssetHubPaseo"
+              },
+              "kind": "substrate",
+              "symbol": "PAS",
+              "decimals": 10,
+              "assetIdentifier": "native:PAS"
+            },
+            "amount": "1"
+          },
+          "destinationAsset": {
+            "chain": {
+              "ecosystem": "substrate",
+              "name": "PeoplePaseo"
+            },
+            "kind": "substrate",
+            "symbol": "PAS",
+            "decimals": 10,
+            "assetIdentifier": "native:PAS"
+          },
+          "destinationRepresentation": "native",
+          "expectedOutput": {
+            "asset": {
+              "chain": {
+                "ecosystem": "substrate",
+                "name": "PeoplePaseo"
+              },
+              "kind": "substrate",
+              "symbol": "PAS",
+              "decimals": 10,
+              "assetIdentifier": "native:PAS"
+            },
+            "amount": "0.999"
+          },
+          "minimumOutput": {
+            "asset": {
+              "chain": {
+                "ecosystem": "substrate",
+                "name": "PeoplePaseo"
+              },
+              "kind": "substrate",
+              "symbol": "PAS",
+              "decimals": 10,
+              "assetIdentifier": "native:PAS"
+            },
+            "amount": "0.999"
+          },
+          "fees": [
+            {
+              "label": "Synthetic source gas",
+              "amount": {
+                "asset": {
+                  "chain": {
+                    "ecosystem": "substrate",
+                    "name": "AssetHubPaseo"
+                  },
+                  "kind": "substrate",
+                  "symbol": "PAS",
+                  "decimals": 10,
+                  "assetIdentifier": "native:PAS"
+                },
+                "amount": "0.001"
+              },
+              "includedInInput": false,
+              "estimatedUsd": "0.02"
+            }
+          ],
+          "gasNeeds": [
+            {
+              "asset": {
+                "chain": {
+                  "ecosystem": "substrate",
+                  "name": "AssetHubPaseo"
+                },
+                "kind": "substrate",
+                "symbol": "PAS",
+                "decimals": 10,
+                "assetIdentifier": "native:PAS"
+              },
+              "amount": "0.03"
+            }
+          ],
+          "totalUserCostUsd": "0.02",
+          "feeComplete": true,
+          "estimatedDurationSeconds": 60,
+          "quotedAt": "2026-10-11T18:00:00+00:00",
+          "warnings": [
+            "SYNTHETIC fixture, not a live route."
+          ],
+          "steps": [
+            {
+              "id": "bridge",
+              "description": "Synthetic bridge",
+              "chain": {
+                "ecosystem": "substrate",
+                "name": "AssetHubPaseo"
+              },
+              "action": "bridge"
+            }
+          ],
+          "provenance": "fixture",
+          "raw": {}
+        }
+      ],
+      "selectedId": "pas",
+      "rejected": [],
+      "errors": [],
+      "traceId": "e7dcc493b1f247e981dda2776b56699f",
+      "executionEnabled": false
+    },
+    "statusCorrect": true,
+    "intentCorrect": true,
+    "selectionCorrect": true,
+    "workflowSuccess": true,
+    "unsafeProposalBlocked": false,
+    "executionEnabled": false
+  },
+  {
+    "scenarioId": "03-usdc",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "04-ambiguous-token",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "05-missing-recipient",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "06-insufficient-input",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "07-insufficient-gas",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "08-stale",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "09-expired",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "10-fee-cap",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "11-unknown-usd",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "12-forbid-wrapped",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "13-tool-injection",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "14-changed-input",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "15-time-limit",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "16-minimum-output",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "17-wrong-chain",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "18-speed-choice",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "19-provider-outage",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  },
+  {
+    "scenarioId": "20-unsupported",
+    "repeat": 0,
+    "applicable": false,
+    "reason": "provider_out_of_scope"
+  }
+]

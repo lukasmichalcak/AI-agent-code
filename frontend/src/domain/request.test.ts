@@ -28,7 +28,7 @@ describe('transfer request validation', () => {
     const intent = createIntent(fields)
     expect(intent.naturalLanguage).toBe('Send 900 USDC')
     expect(intent.amount).toBe(valid.amount)
-    expect(intent.constraints).toEqual({ maximumFeeUsd: '0', minimumReceived: '0', allowWrapped: true })
+    expect(intent.constraints).toEqual({ maximumFeeUsd: '0', minimumReceived: '0', allowWrapped: true, maximumDurationSeconds: undefined, preference: 'cost' })
     expect(validateRequest({ ...valid, maximumFeeUsd: '-1' }).maximumFeeUsd).toBeDefined()
     expect(validateRequest({ ...valid, minimumReceived: '-1' }).minimumReceived).toBeDefined()
     expect(() => createIntent(initialFields)).toThrow()

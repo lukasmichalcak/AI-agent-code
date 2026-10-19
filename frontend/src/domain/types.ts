@@ -1,6 +1,6 @@
 export type ChainRef =
   | { ecosystem: 'evm'; chainId: number }
-  | { ecosystem: 'substrate'; genesisHash: string; name: string }
+  | { ecosystem: 'substrate'; genesisHash?: string; name: string }
 
 // Symbols are display metadata; chain + identifier establishes identity.
 export type AssetId =
@@ -20,7 +20,7 @@ export interface TransferIntent {
   destinationAsset: AssetId
   amount: string
   recipient: string
-  constraints: { maximumFeeUsd?: string; minimumReceived?: string; allowWrapped: boolean }
+  constraints: { maximumFeeUsd?: string; minimumReceived?: string; allowWrapped: boolean; maximumDurationSeconds?: number; preference?: 'cost' | 'speed' | 'output' }
 }
 export interface FeeItem {
   label: string
@@ -36,8 +36,12 @@ export interface RouteCandidate {
   sourceAsset: AssetId
   sourceInput: AssetAmount
   destinationAsset: AssetId
-  destinationRepresentation: 'native' | 'wrapped' | 'canonical'
+  destinationRepresentation: 'native' | 'wrapped' | 'canonical' | 'unknown'
   expectedOutput: AssetAmount
+  minimumOutput?: AssetAmount
+  feeComplete?: boolean
+  estimatedDurationSeconds?: number
+  provenance?: 'live' | 'fixture'
   fees: FeeItem[]
   gasNeeds: AssetAmount[]
   totalUserCostUsd?: string

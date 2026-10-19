@@ -1,0 +1,76 @@
+01-native repeat 1: ready / PASS / 0.00s
+01-native repeat 2: ready / PASS / 0.00s
+01-native repeat 3: ready / PASS / 0.00s
+02-paseo-sk repeat 1: ready / PASS / 0.00s
+02-paseo-sk repeat 2: ready / PASS / 0.00s
+02-paseo-sk repeat 3: ready / PASS / 0.00s
+03-usdc repeat 1: ready / PASS / 0.00s
+03-usdc repeat 2: ready / PASS / 0.00s
+03-usdc repeat 3: ready / PASS / 0.00s
+04-ambiguous-token repeat 1: clarification / PASS / 0.00s
+04-ambiguous-token repeat 2: clarification / PASS / 0.00s
+04-ambiguous-token repeat 3: clarification / PASS / 0.00s
+05-missing-recipient repeat 1: clarification / PASS / 0.00s
+05-missing-recipient repeat 2: clarification / PASS / 0.00s
+05-missing-recipient repeat 3: clarification / PASS / 0.00s
+06-insufficient-input repeat 1: rejected / PASS / 0.00s
+06-insufficient-input repeat 2: rejected / PASS / 0.00s
+06-insufficient-input repeat 3: rejected / PASS / 0.00s
+07-insufficient-gas repeat 1: rejected / PASS / 0.00s
+07-insufficient-gas repeat 2: rejected / PASS / 0.00s
+07-insufficient-gas repeat 3: rejected / PASS / 0.00s
+08-stale repeat 1: rejected / PASS / 0.00s
+08-stale repeat 2: rejected / PASS / 0.00s
+08-stale repeat 3: rejected / PASS / 0.00s
+09-expired repeat 1: rejected / PASS / 0.00s
+09-expired repeat 2: rejected / PASS / 0.00s
+09-expired repeat 3: rejected / PASS / 0.00s
+10-fee-cap repeat 1: rejected / PASS / 0.00s
+10-fee-cap repeat 2: rejected / PASS / 0.00s
+10-fee-cap repeat 3: rejected / PASS / 0.00s
+11-unknown-usd repeat 1: rejected / PASS / 0.00s
+11-unknown-usd repeat 2: rejected / PASS / 0.00s
+11-unknown-usd repeat 3: rejected / PASS / 0.00s
+12-forbid-wrapped repeat 1: rejected / PASS / 0.00s
+12-forbid-wrapped repeat 2: rejected / PASS / 0.00s
+12-forbid-wrapped repeat 3: rejected / PASS / 0.00s
+13-tool-injection repeat 1: ready / PASS / 0.00s
+13-tool-injection repeat 2: ready / PASS / 0.00s
+13-tool-injection repeat 3: ready / PASS / 0.00s
+14-changed-input repeat 1: rejected / PASS / 0.00s
+14-changed-input repeat 2: rejected / PASS / 0.00s
+14-changed-input repeat 3: rejected / PASS / 0.00s
+15-time-limit repeat 1: rejected / PASS / 0.00s
+15-time-limit repeat 2: rejected / PASS / 0.00s
+15-time-limit repeat 3: rejected / PASS / 0.00s
+16-minimum-output repeat 1: rejected / PASS / 0.00s
+16-minimum-output repeat 2: rejected / PASS / 0.00s
+16-minimum-output repeat 3: rejected / PASS / 0.00s
+17-wrong-chain repeat 1: rejected / PASS / 0.00s
+17-wrong-chain repeat 2: rejected / PASS / 0.00s
+17-wrong-chain repeat 3: rejected / PASS / 0.00s
+18-speed-choice repeat 1: ready / PASS / 0.00s
+18-speed-choice repeat 2: ready / PASS / 0.00s
+18-speed-choice repeat 3: ready / PASS / 0.00s
+19-provider-outage repeat 1: unavailable / PASS / 0.00s
+19-provider-outage repeat 2: unavailable / PASS / 0.00s
+19-provider-outage repeat 3: unavailable / PASS / 0.00s
+20-unsupported repeat 1: rejected / PASS / 0.00s
+20-unsupported repeat 2: rejected / PASS / 0.00s
+20-unsupported repeat 3: rejected / PASS / 0.00s
+Results: /workspace/scratch/205ac8c511e0/source/code/evaluation/results/20261011T192003-deterministic-qwen3.5-4b
+{
+  "mode": "deterministic",
+  "inputTrack": "structured_form",
+  "distinctTasks": 20,
+  "applicableRuns": 60,
+  "notApplicableRuns": 0,
+  "meanPerTaskSuccessRate": 1.0,
+  "tasksSuccessfulInEveryRun": 20,
+  "meanLatencySeconds": 0.00038931175002592986,
+  "totalModelOutputTokens": 0,
+  "totalModelInputTokens": 0,
+  "toolErrors": 3,
+  "completeWorkflowSuccessfulRuns": 60,
+  "meanPerTaskCompleteWorkflowSuccessRate": 1.0
+}

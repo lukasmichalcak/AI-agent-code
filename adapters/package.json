@@ -1,0 +1,6 @@
+{
+  "name": "thesis-readonly-adapters", "private": true, "type": "module", "version": "0.1.0",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": { "start": "node server.mjs", "test": "node --test test/*.test.mjs" },
+  "dependencies": { "@paraspell/sdk": "14.4.0", "@paraspell/descriptors": "14.4.0", "polkadot-api": "3.2.1", "@wormhole-foundation/sdk": "6.1.5", "@wormhole-foundation/sdk-connect": "6.1.5", "viem": "2.57.3" }
+}

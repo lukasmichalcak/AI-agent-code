@@ -217,3 +217,8 @@ button.suggestion:hover { background: #edf5f0; }
   .workspace-main footer span:last-child { display: none; }
   .view-actions button { font-size: 12px; }
 }
+
+.inspection-account { display: grid; gap: .35rem; width: calc(100% - 2rem); max-width: 42rem; margin: 1rem auto; }
+.inspection-account label, .inspection-account small { color: var(--muted, #64748b); font-size: .8rem; }
+.inspection-account input { width: 100%; min-width: 0; padding: .7rem; border: 1px solid #dbe2ea; border-radius: .5rem; background: white; }
+.candidate p, .candidate small { overflow-wrap: anywhere; }

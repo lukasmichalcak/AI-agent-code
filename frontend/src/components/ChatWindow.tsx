@@ -1,8 +1,8 @@
 import { useEffect, useRef, type FormEvent } from 'react'
 import type { Conversation } from '../domain/conversations'
 
-export function ChatWindow({ conversation, onDraft, onSend, onDetails, active }: {
-  conversation: Conversation; onDraft: (value: string) => void; onSend: () => void; onDetails: () => void; active: boolean
+export function ChatWindow({ conversation, onDraft, onSend, onDetails, active, busy }: {
+  conversation: Conversation; onDraft: (value: string) => void; onSend: () => void; onDetails: () => void; active: boolean; busy?: boolean
 }) {
   const endRef = useRef<HTMLDivElement>(null)
   useEffect(() => { if (active) endRef.current?.scrollIntoView({ block: 'nearest' }) }, [conversation.id, conversation.messages.length, active])
@@ -14,7 +14,7 @@ export function ChatWindow({ conversation, onDraft, onSend, onDetails, active }:
         <h1>Where would you like<br />to move your assets?</h1>
         <p>Start with your goal. Then set the exact details and review your request, one step at a time.</p>
         <button className="suggestion" onClick={() => onDraft('Send ETH from Base Sepolia to Arbitrum Sepolia.')}>Send ETH between testnets <span aria-hidden="true">↗</span></button>
-        <p className="muted">Prototype · Chat saves your goal; automatic planning is not connected yet.</p>
+        <p className="muted">Read-only prototype · Local model interprets your goal and uses routing tools.</p>
       </div> : <div className="message-list">{conversation.messages.map(message => <article key={message.id} className={`message ${message.role}`}>
         <span className="message-avatar" aria-hidden="true">{message.role === 'user' ? 'You' : '↗'}</span>
         <div><p className="message-author">{message.role === 'user' ? 'You' : 'Cross-chain assistant'}</p><p className="message-text">{message.text}</p>
@@ -28,7 +28,7 @@ export function ChatWindow({ conversation, onDraft, onSend, onDetails, active }:
       <textarea id="chat-draft" rows={2} value={conversation.draft} placeholder="Describe your transfer goal…" onChange={event => onDraft(event.target.value)} onKeyDown={event => {
         if (event.key === 'Enter' && !event.shiftKey && !event.nativeEvent.isComposing) { event.preventDefault(); onSend() }
       }} />
-      <div className="composer-bottom"><span>Enter to send · Shift + Enter for a new line</span><button type="submit" disabled={!conversation.draft.trim()} aria-label="Send message">Send <span aria-hidden="true">↑</span></button></div>
+      <div className="composer-bottom"><span>Enter to send · Shift + Enter for a new line</span><button type="submit" disabled={busy || !conversation.draft.trim()} aria-label="Send message">{busy ? 'Planning…' : 'Send'} <span aria-hidden="true">↑</span></button></div>
     </form>
     <p className="chat-footnote">Chat messages prepare a request. Transfers require a quote and separate approval.</p>
   </div>

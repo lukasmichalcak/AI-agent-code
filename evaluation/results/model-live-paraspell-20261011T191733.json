@@ -1,0 +1,391 @@
+{
+  "readOnly": true,
+  "inputTrack": "structured-form + model planner",
+  "fixtureToolsUsed": false,
+  "model": "qwen3.5:4b",
+  "outcome": {
+    "status": "ready",
+    "message": "Read-only candidates validated for review. No transaction is signed or submitted.",
+    "intent": {
+      "id": "dataset",
+      "naturalLanguage": "Po\u0161li 1 nat\u00edvny PAS (10 desatinn\u00fdch miest, native:PAS) z AssetHubPaseo do PeoplePaseo na 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY.",
+      "sourceAsset": {
+        "chain": {
+          "ecosystem": "substrate",
+          "name": "AssetHubPaseo"
+        },
+        "kind": "substrate",
+        "symbol": "PAS",
+        "decimals": 10,
+        "assetIdentifier": "native:PAS"
+      },
+      "destinationAsset": {
+        "chain": {
+          "ecosystem": "substrate",
+          "name": "PeoplePaseo"
+        },
+        "kind": "substrate",
+        "symbol": "PAS",
+        "decimals": 10,
+        "assetIdentifier": "native:PAS"
+      },
+      "amount": "1",
+      "recipient": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+      "constraints": {
+        "allowWrapped": false,
+        "preference": "cost"
+      }
+    },
+    "candidates": [
+      {
+        "id": "f58e2d48b7584327b789fd7b8a126913",
+        "intentId": "dataset",
+        "provider": "paraspell",
+        "sourceAsset": {
+          "chain": {
+            "ecosystem": "substrate",
+            "name": "AssetHubPaseo"
+          },
+          "kind": "substrate",
+          "symbol": "PAS",
+          "decimals": 10,
+          "assetIdentifier": "native:PAS"
+        },
+        "sourceInput": {
+          "asset": {
+            "chain": {
+              "ecosystem": "substrate",
+              "name": "AssetHubPaseo"
+            },
+            "kind": "substrate",
+            "symbol": "PAS",
+            "decimals": 10,
+            "assetIdentifier": "native:PAS"
+          },
+          "amount": "1"
+        },
+        "destinationAsset": {
+          "chain": {
+            "ecosystem": "substrate",
+            "name": "PeoplePaseo"
+          },
+          "kind": "substrate",
+          "symbol": "PAS",
+          "decimals": 10,
+          "assetIdentifier": "native:PAS"
+        },
+        "destinationRepresentation": "native",
+        "expectedOutput": {
+          "asset": {
+            "chain": {
+              "ecosystem": "substrate",
+              "name": "PeoplePaseo"
+            },
+            "kind": "substrate",
+            "symbol": "PAS",
+            "decimals": 10,
+            "assetIdentifier": "native:PAS"
+          },
+          "amount": "0.9996831873"
+        },
+        "fees": [
+          {
+            "label": "XCM origin",
+            "amount": {
+              "asset": {
+                "chain": {
+                  "ecosystem": "substrate",
+                  "name": "AssetHubPaseo"
+                },
+                "kind": "substrate",
+                "symbol": "PAS",
+                "decimals": 10,
+                "assetIdentifier": "native:PAS"
+              },
+              "amount": "0.0315345638"
+            },
+            "includedInInput": false
+          },
+          {
+            "label": "XCM destination",
+            "amount": {
+              "asset": {
+                "chain": {
+                  "ecosystem": "substrate",
+                  "name": "PeoplePaseo"
+                },
+                "kind": "substrate",
+                "symbol": "PAS",
+                "decimals": 10,
+                "assetIdentifier": "native:PAS"
+              },
+              "amount": "0.0003168127"
+            },
+            "includedInInput": true
+          }
+        ],
+        "gasNeeds": [
+          {
+            "asset": {
+              "chain": {
+                "ecosystem": "substrate",
+                "name": "AssetHubPaseo"
+              },
+              "kind": "substrate",
+              "symbol": "PAS",
+              "decimals": 10,
+              "assetIdentifier": "native:PAS"
+            },
+            "amount": "0.0315345638"
+          }
+        ],
+        "feeComplete": false,
+        "quotedAt": "2026-10-11T19:16:39.622920+00:00",
+        "warnings": [
+          "Dry-run estimate; USD valuation, duration and guaranteed minimum output are unavailable."
+        ],
+        "steps": [
+          {
+            "id": "xcm",
+            "description": "ParaSpell XCM transfer",
+            "chain": {
+              "ecosystem": "substrate",
+              "name": "AssetHubPaseo"
+            },
+            "action": "transfer"
+          }
+        ],
+        "provenance": "live",
+        "raw": {
+          "info": {
+            "chain": {
+              "origin": "AssetHubPaseo",
+              "destination": "PeoplePaseo",
+              "ecosystem": "PAS"
+            },
+            "origin": {
+              "selectedCurrency": {
+                "sufficient": true,
+                "balance": "75459876616612",
+                "balanceAfter": "75449876616612",
+                "asset": {
+                  "symbol": "PAS",
+                  "isNative": true,
+                  "decimals": 10,
+                  "existentialDeposit": "100000000",
+                  "location": {
+                    "parents": 1,
+                    "interior": {
+                      "Here": null
+                    }
+                  },
+                  "isFeeAsset": true
+                }
+              },
+              "xcmFee": {
+                "sufficient": true,
+                "fee": "315345638",
+                "balance": "75459876616612",
+                "balanceAfter": "75459561270974",
+                "asset": {
+                  "symbol": "PAS",
+                  "isNative": true,
+                  "decimals": 10,
+                  "existentialDeposit": "100000000",
+                  "location": {
+                    "parents": 1,
+                    "interior": {
+                      "Here": null
+                    }
+                  },
+                  "isFeeAsset": true
+                }
+              }
+            },
+            "hops": [],
+            "destination": {
+              "receivedCurrency": {
+                "sufficient": true,
+                "receivedAmount": "9996831873",
+                "balance": "6589996217253",
+                "balanceAfter": "6599993049126",
+                "asset": {
+                  "symbol": "PAS",
+                  "isNative": true,
+                  "decimals": 10,
+                  "existentialDeposit": "1000000000",
+                  "location": {
+                    "parents": 1,
+                    "interior": {
+                      "Here": null
+                    }
+                  },
+                  "isFeeAsset": true
+                }
+              },
+              "xcmFee": {
+                "fee": "3168127",
+                "balance": "6589996217253",
+                "balanceAfter": "6599993049126",
+                "asset": {
+                  "symbol": "PAS",
+                  "isNative": true,
+                  "decimals": 10,
+                  "existentialDeposit": "1000000000",
+                  "location": {
+                    "parents": 1,
+                    "interior": {
+                      "Here": null
+                    }
+                  },
+                  "isFeeAsset": true,
+                  "amount": "10000000000"
+                }
+              }
+            }
+          },
+          "dryRun": {
+            "success": true,
+            "origin": {
+              "success": true,
+              "fee": "315345638",
+              "asset": {
+                "symbol": "PAS",
+                "isNative": true,
+                "decimals": 10,
+                "existentialDeposit": "100000000",
+                "location": {
+                  "parents": 1,
+                  "interior": {
+                    "Here": null
+                  }
+                },
+                "isFeeAsset": true
+              },
+              "forwardedXcms": [
+                {
+                  "type": "V5",
+                  "value": {
+                    "parents": 1,
+                    "interior": {
+                      "type": "X1",
+                      "value": {
+                        "type": "Parachain",
+                        "value": 1004
+                      }
+                    }
+                  }
+                },
+                [
+                  {
+                    "type": "V5",
+                    "value": [
+                      {
+                        "type": "ReceiveTeleportedAsset",
+                        "value": [
+                          {
+                            "id": {
+                              "parents": 1,
+                              "interior": {
+                                "type": "Here"
+                              }
+                            },
+                            "fun": {
+                              "type": "Fungible",
+                              "value": "10000000000"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "ClearOrigin"
+                      },
+                      {
+                        "type": "BuyExecution",
+                        "value": {
+                          "fees": {
+                            "id": {
+                              "parents": 1,
+                              "interior": {
+                                "type": "Here"
+                              }
+                            },
+                            "fun": {
+                              "type": "Fungible",
+                              "value": "10000000000"
+                            }
+                          },
+                          "weight_limit": {
+                            "type": "Unlimited"
+                          }
+                        }
+                      },
+                      {
+                        "type": "DepositAsset",
+                        "value": {
+                          "assets": {
+                            "type": "Wild",
+                            "value": {
+                              "type": "AllCounted",
+                              "value": 1
+                            }
+                          },
+                          "beneficiary": {
+                            "parents": 0,
+                            "interior": {
+                              "type": "X1",
+                              "value": {
+                                "type": "AccountId32",
+                                "value": {
+                                  "id": "0xd43593c715fdd31c61141abd04a99fd6822c8558854ccde39a5684e7a56da27d"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "type": "SetTopic",
+                        "value": "0xc2c04b647eea527156e08ae369120bfd19c5a651b64b5c4fc8385c20053cfcbd"
+                      }
+                    ]
+                  }
+                ]
+              ],
+              "destParaId": 1004
+            },
+            "destination": {
+              "success": true,
+              "fee": "3168127",
+              "asset": {
+                "symbol": "PAS",
+                "isNative": true,
+                "decimals": 10,
+                "existentialDeposit": "1000000000",
+                "location": {
+                  "parents": 1,
+                  "interior": {
+                    "Here": null
+                  }
+                },
+                "isFeeAsset": true
+              },
+              "weight": {
+                "refTime": "297040000",
+                "proofSize": "3593"
+              },
+              "forwardedXcms": []
+            },
+            "hops": []
+          },
+          "sdk": "14.4.0"
+        }
+      }
+    ],
+    "selectedId": "f58e2d48b7584327b789fd7b8a126913",
+    "rejected": [],
+    "errors": [],
+    "traceId": "a47a26eafe324075b8b47abfad9e0dd5",
+    "executionEnabled": false
+  }
+}

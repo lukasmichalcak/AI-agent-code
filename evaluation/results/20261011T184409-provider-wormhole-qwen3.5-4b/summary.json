@@ -1,0 +1,28 @@
+{
+  "mode": "provider:wormhole",
+  "inputTrack": "structured_form",
+  "distinctTasks": 1,
+  "applicableRuns": 1,
+  "notApplicableRuns": 19,
+  "meanPerTaskSuccessRate": 0.0,
+  "tasksSuccessfulInEveryRun": 0,
+  "meanLatencySeconds": 0.005117276999953901,
+  "totalModelOutputTokens": 0,
+  "totalModelInputTokens": 0,
+  "toolErrors": 0,
+  "perTask": [
+    {
+      "scenarioId": "18-speed-choice",
+      "runs": 1,
+      "successRate": 0.0,
+      "allRunsSuccessful": false,
+      "statusStable": true
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture results are not transfer success or live routing reliability.",
+    "Structured-form baselines do not measure natural-language interpretation.",
+    "Repeated attempts on a task are not independent tasks.",
+    "No dollar inference cost or energy was measured."
+  ]
+}

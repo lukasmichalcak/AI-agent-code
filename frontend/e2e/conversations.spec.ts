@@ -1,11 +1,12 @@
 import { expect, test } from '@playwright/test'
 
 test('conversation drafts, reviews and history survive view changes and reload', async ({ page }) => {
+  await page.route('**/api/chat', route => route.fulfill({json:{status:'clarification',message:'Specify exact assets and recipient.',candidates:[],rejected:[],errors:[],traceId:'test',executionEnabled:false}}))
   await page.goto('/')
   await page.getByLabel('Message', { exact: true }).fill('Move ETH to Arbitrum')
   await page.getByRole('button', { name: 'Send message' }).click()
   await expect(page.getByRole('log')).toContainText('Move ETH to Arbitrum')
-  await expect(page.getByRole('log')).toContainText('Automatic interpretation and route planning are not connected yet.')
+  await expect(page.getByRole('log')).toContainText('Specify exact assets and recipient.')
   await page.getByRole('button', { name: 'Open transfer details' }).click()
   await expect(page.getByLabel('Amount to send')).toHaveValue('')
   await page.getByLabel('Amount to send').fill('0.15')

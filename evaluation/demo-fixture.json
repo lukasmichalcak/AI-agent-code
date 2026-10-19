@@ -1,0 +1,136 @@
+{
+  "referenceTime": "2026-10-11T18:00:00+00:00",
+  "providers": [
+    "lifi"
+  ],
+  "candidates": [
+    {
+      "id": "lifi-cheap",
+      "intentId": "dataset",
+      "provider": "lifi",
+      "sourceAsset": {
+        "chain": {
+          "ecosystem": "evm",
+          "chainId": 84532
+        },
+        "kind": "native",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "sourceInput": {
+        "asset": {
+          "chain": {
+            "ecosystem": "evm",
+            "chainId": 84532
+          },
+          "kind": "native",
+          "symbol": "ETH",
+          "decimals": 18
+        },
+        "amount": "0.1"
+      },
+      "destinationAsset": {
+        "chain": {
+          "ecosystem": "evm",
+          "chainId": 421614
+        },
+        "kind": "native",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "destinationRepresentation": "native",
+      "expectedOutput": {
+        "asset": {
+          "chain": {
+            "ecosystem": "evm",
+            "chainId": 421614
+          },
+          "kind": "native",
+          "symbol": "ETH",
+          "decimals": 18
+        },
+        "amount": "0.099"
+      },
+      "minimumOutput": {
+        "asset": {
+          "chain": {
+            "ecosystem": "evm",
+            "chainId": 421614
+          },
+          "kind": "native",
+          "symbol": "ETH",
+          "decimals": 18
+        },
+        "amount": "0.099"
+      },
+      "fees": [
+        {
+          "label": "Synthetic source gas",
+          "amount": {
+            "asset": {
+              "chain": {
+                "ecosystem": "evm",
+                "chainId": 84532
+              },
+              "kind": "native",
+              "symbol": "ETH",
+              "decimals": 18
+            },
+            "amount": "0.001"
+          },
+          "includedInInput": false,
+          "estimatedUsd": "0.03"
+        }
+      ],
+      "gasNeeds": [
+        {
+          "asset": {
+            "chain": {
+              "ecosystem": "evm",
+              "chainId": 84532
+            },
+            "kind": "native",
+            "symbol": "ETH",
+            "decimals": 18
+          },
+          "amount": "0.001"
+        }
+      ],
+      "totalUserCostUsd": "0.03",
+      "feeComplete": true,
+      "estimatedDurationSeconds": 60,
+      "quotedAt": "2026-10-11T18:00:00+00:00",
+      "warnings": [
+        "SYNTHETIC fixture, not a live route."
+      ],
+      "steps": [
+        {
+          "id": "bridge",
+          "description": "Synthetic bridge",
+          "chain": {
+            "ecosystem": "evm",
+            "chainId": 84532
+          },
+          "action": "bridge"
+        }
+      ],
+      "provenance": "fixture",
+      "raw": {}
+    }
+  ],
+  "balances": [
+    {
+      "asset": {
+        "chain": {
+          "ecosystem": "evm",
+          "chainId": 84532
+        },
+        "kind": "native",
+        "symbol": "ETH",
+        "decimals": 18
+      },
+      "address": "0x1111111111111111111111111111111111111111",
+      "amount": "2"
+    }
+  ]
+}

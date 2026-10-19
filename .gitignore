@@ -5,3 +5,9 @@ dist/
 .env.*.local
 test-results/
 playwright-report/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+# Logs can include public addresses and task text; only curated evidence is versioned.
+evaluation/results/*/traces/

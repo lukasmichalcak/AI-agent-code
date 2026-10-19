@@ -4,7 +4,7 @@ import { encodeAbiParameters } from 'viem'
 test('request review, errors, custom token identity and responsive layout', async ({ page }) => {
   await page.goto('/')
   await page.getByRole('tab', { name: 'Plans', exact: true }).click()
-  await expect(page.getByText('Planning integration pending', { exact: true })).toBeVisible()
+  await expect(page.getByText('No candidates yet', { exact: true })).toBeVisible()
   await page.getByRole('tab', { name: 'Transfer details', exact: true }).click()
   await page.getByRole('button', { name: 'Review request' }).click()
   await expect(page.locator('#amount-error')).toBeVisible()

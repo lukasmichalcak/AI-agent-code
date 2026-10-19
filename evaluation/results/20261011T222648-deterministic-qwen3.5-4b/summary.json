@@ -1,0 +1,183 @@
+{
+  "mode": "deterministic",
+  "inputTrack": "structured_form",
+  "distinctTasks": 20,
+  "applicableRuns": 20,
+  "notApplicableRuns": 0,
+  "meanPerTaskSuccessRate": 1.0,
+  "tasksSuccessfulInEveryRun": 20,
+  "meanLatencySeconds": 0.002966690000175731,
+  "totalModelOutputTokens": 0,
+  "totalModelInputTokens": 0,
+  "toolErrors": 1,
+  "perTask": [
+    {
+      "scenarioId": "01-native",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "02-paseo-sk",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "03-usdc",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "04-ambiguous-token",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "05-missing-recipient",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "06-insufficient-input",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "07-insufficient-gas",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "08-stale",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "09-expired",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "10-fee-cap",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "11-unknown-usd",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "12-forbid-wrapped",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "13-tool-injection",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "14-changed-input",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "15-time-limit",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "16-minimum-output",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "17-wrong-chain",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "18-speed-choice",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "19-provider-outage",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "20-unsupported",
+      "runs": 1,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    }
+  ],
+  "completeWorkflowSuccessfulRuns": 20,
+  "meanPerTaskCompleteWorkflowSuccessRate": 1.0,
+  "limitations": [
+    "Synthetic fixture results are not transfer success or live routing reliability.",
+    "Structured-form baselines do not measure natural-language interpretation.",
+    "Repeated attempts on a task are not independent tasks.",
+    "No dollar inference cost or energy was measured."
+  ]
+}

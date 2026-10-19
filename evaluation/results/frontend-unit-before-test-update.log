@@ -1,0 +1,16 @@
+
+> interoperability-router-frontend@0.1.0 test
+> vitest run src
+
+
+ RUN  v5.0.3 /workspace/scratch/205ac8c511e0/source/code/frontend
+
+ ❯ src/domain/request.test.ts (9 tests | 1 failed) 31ms
+   ❯ transfer request validation (9)
+     × checks constraints and preserves natural-language text without parsing it 16ms
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 passed (9)
+   Start at  19:51:54
+   Duration  1.95s (import 92%, transform 5%, tests 2%, worker 1%)
+

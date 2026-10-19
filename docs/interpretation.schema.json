@@ -1,0 +1,220 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "status": {
+      "enum": [
+        "intent",
+        "clarification"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "sourceChain": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sourcechain"
+    },
+    "destinationChain": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Destinationchain"
+    },
+    "sourceKind": {
+      "anyOf": [
+        {
+          "enum": [
+            "native",
+            "erc20"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sourcekind"
+    },
+    "destinationKind": {
+      "anyOf": [
+        {
+          "enum": [
+            "native",
+            "erc20"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Destinationkind"
+    },
+    "sourceContract": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sourcecontract"
+    },
+    "destinationContract": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Destinationcontract"
+    },
+    "sourceDecimals": {
+      "anyOf": [
+        {
+          "maximum": 255,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Sourcedecimals"
+    },
+    "destinationDecimals": {
+      "anyOf": [
+        {
+          "maximum": 255,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Destinationdecimals"
+    },
+    "amount": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "pattern": "^\\d+(\\.\\d+)?$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Amount"
+    },
+    "recipient": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Recipient"
+    },
+    "maximumFeeUsd": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "pattern": "^\\d+(\\.\\d+)?$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Maximumfeeusd"
+    },
+    "minimumReceived": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "pattern": "^\\d+(\\.\\d+)?$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Minimumreceived"
+    },
+    "maximumDurationSeconds": {
+      "anyOf": [
+        {
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Maximumdurationseconds"
+    },
+    "allowWrapped": {
+      "default": false,
+      "title": "Allowwrapped",
+      "type": "boolean"
+    },
+    "preference": {
+      "default": "cost",
+      "enum": [
+        "cost",
+        "speed",
+        "output"
+      ],
+      "title": "Preference",
+      "type": "string"
+    },
+    "clarification": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Clarification"
+    }
+  },
+  "required": [
+    "status"
+  ],
+  "title": "Extraction",
+  "type": "object"
+}

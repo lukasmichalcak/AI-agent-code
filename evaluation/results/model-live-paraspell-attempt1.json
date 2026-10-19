@@ -1,0 +1,76 @@
+{
+  "readOnly": true,
+  "inputTrack": "structured-form + model planner",
+  "fixtureToolsUsed": false,
+  "model": "qwen3.5:4b",
+  "outcome": {
+    "status": "unavailable",
+    "message": "Provider or model calls failed; absence of a route is not proven.",
+    "intent": {
+      "id": "dataset",
+      "naturalLanguage": "Po\u0161li 1 nat\u00edvny PAS (10 desatinn\u00fdch miest, native:PAS) z AssetHubPaseo do PeoplePaseo na 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY.",
+      "sourceAsset": {
+        "chain": {
+          "ecosystem": "substrate",
+          "name": "AssetHubPaseo"
+        },
+        "kind": "substrate",
+        "symbol": "PAS",
+        "decimals": 10,
+        "assetIdentifier": "native:PAS"
+      },
+      "destinationAsset": {
+        "chain": {
+          "ecosystem": "substrate",
+          "name": "PeoplePaseo"
+        },
+        "kind": "substrate",
+        "symbol": "PAS",
+        "decimals": 10,
+        "assetIdentifier": "native:PAS"
+      },
+      "amount": "1",
+      "recipient": "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY",
+      "constraints": {
+        "allowWrapped": false,
+        "preference": "cost"
+      }
+    },
+    "candidates": [],
+    "rejected": [],
+    "errors": [
+      {
+        "tool": "quote",
+        "provider": "paraspell",
+        "error": "RuntimeError",
+        "message": "SDK timeout; worker terminated"
+      },
+      {
+        "tool": "quote",
+        "provider": "paraspell",
+        "error": "ValueError",
+        "message": "Duplicate tool call refused"
+      },
+      {
+        "tool": "quote",
+        "provider": "paraspell",
+        "error": "ValueError",
+        "message": "Duplicate tool call refused"
+      },
+      {
+        "tool": "quote",
+        "provider": "paraspell",
+        "error": "ValueError",
+        "message": "Duplicate tool call refused"
+      },
+      {
+        "tool": "quote",
+        "provider": "paraspell",
+        "error": "ValueError",
+        "message": "Duplicate tool call refused"
+      }
+    ],
+    "traceId": "1330a8e889b0405bb3ec3e06ad939049",
+    "executionEnabled": false
+  }
+}

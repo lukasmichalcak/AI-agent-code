@@ -1,5 +1,5 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
-import { supportedChains } from '../domain/chains'
+import { requestChains } from '../domain/chains'
 import { createIntent, validateRequest, type RequestFields, type RequestErrors } from '../domain/request'
 import type { TransferIntent } from '../domain/types'
 
@@ -28,7 +28,7 @@ export function RequestForm({ fields, onChange, onReview, connectedAddress }: { 
   function assets(side: 'source' | 'destination') {
     const kindKey = `${side}Kind` as const
     return <>
-      {field(kindKey, side === 'source' ? 'Source asset' : 'Destination asset', <select id={kindKey} value={fields[kindKey]} onChange={event => update(kindKey, event.target.value as 'native' | 'erc20')}><option value="native">ETH · native gas token</option><option value="erc20">Custom ERC-20 token</option></select>)}
+      {field(kindKey, side === 'source' ? 'Source asset' : 'Destination asset', <select id={kindKey} value={fields[kindKey]} onChange={event => update(kindKey, event.target.value as 'native' | 'erc20' | 'substrate')}>{/^\d+$/.test(fields[`${side}Chain`]) ? <><option value="native">ETH · native gas token</option><option value="erc20">Custom ERC-20 token</option></> : <option value="substrate">PAS · native:PAS (10 decimals)</option>}</select>)}
       {fields[kindKey] === 'erc20' && <div className="custom-asset">
         {field(`${side}Address`, 'Token contract address', input(`${side}Address`, '0x…'), 'Use the contract on the selected chain. Token metadata is manually supplied and will need on-chain verification before quoting.')}
         <div className="two-columns">{field(`${side}Symbol`, 'Display symbol', input(`${side}Symbol`, 'e.g. USDC'))}{field(`${side}Decimals`, 'Token decimals', input(`${side}Decimals`, 'e.g. 6', true))}</div>
@@ -37,7 +37,7 @@ export function RequestForm({ fields, onChange, onReview, connectedAddress }: { 
   }
   function chain(side: 'source' | 'destination') {
     const key = `${side}Chain` as const
-    return field(key, side === 'source' ? 'Source chain' : 'Destination chain', <select id={key} value={fields[key]} onChange={event => update(key, event.target.value)} aria-invalid={!!errors[key]} aria-describedby={`${key}-error`}>{supportedChains.map(chain => <option value={chain.id} key={chain.id}>{chain.name}</option>)}</select>)
+    return field(key, side === 'source' ? 'Source chain' : 'Destination chain', <select id={key} value={fields[key]} onChange={event => { const value = event.target.value; onChange({ ...fields, [key]: value, [`${side}Kind`]: /^\d+$/.test(value) ? 'native' : 'substrate' }) }} aria-invalid={!!errors[key]} aria-describedby={`${key}-error`}>{requestChains.map(chain => <option value={chain.id} key={chain.id}>{chain.name}</option>)}</select>)
   }
   return <form onSubmit={submit} noValidate>
     <details className="panel task-panel"><summary>Request context</summary><p className="muted">Your chat goal is kept here. It does not automatically populate transfer fields.</p>
@@ -45,8 +45,9 @@ export function RequestForm({ fields, onChange, onReview, connectedAddress }: { 
       <textarea id="naturalLanguage" rows={3} value={fields.naturalLanguage} onChange={event => update('naturalLanguage', event.target.value)} placeholder="For example: Send 2 USDC from Base to Arbitrum and keep the total cost below $1." aria-describedby="task-help" />
     </details>
     <section className="panel"><div className="section-heading"><span className="step-number">02</span><div><h2>Transfer details</h2><p>Choose where your assets start and where they should arrive.</p></div></div>
-      <div className="transfer-columns"><div className="asset-column"><h3>From</h3>{chain('source')}{assets('source')}{field('amount', 'Amount to send', input('amount', '0.00', true), 'Amount in source token units; fees are not yet known.')}</div><div className="asset-column"><h3>To</h3>{chain('destination')}{assets('destination')}{field('recipient', 'Recipient address', input('recipient', '0x…'), 'The EVM address that receives the destination asset.')}{connectedAddress && <button type="button" className="text-button" onClick={() => update('recipient', connectedAddress)}>Use connected address</button>}</div></div>
+      <div className="transfer-columns"><div className="asset-column"><h3>From</h3>{chain('source')}{assets('source')}{field('amount', 'Amount to send', input('amount', '0.00', true), 'Amount in source token units; fees are not yet known.')}</div><div className="asset-column"><h3>To</h3>{chain('destination')}{assets('destination')}{field('recipient', 'Recipient address', input('recipient', '0x…'), 'EVM 0x address or SS58 address for the selected destination.')}{connectedAddress && <button type="button" className="text-button" onClick={() => update('recipient', connectedAddress)}>Use connected address</button>}</div></div>
       <div className="constraints"><h3>Your constraints</h3><p className="muted">These are limits you request, not estimates or guarantees.</p><div className="two-columns">{field('maximumFeeUsd', 'Maximum total fee (USD, optional)', input('maximumFeeUsd', 'e.g. 1.00', true), 'Future plans must compare all fees and gas using explicit USD valuations.')}{field('minimumReceived', 'Minimum received (optional)', input('minimumReceived', 'e.g. 1.95', true), 'In units of the chosen destination asset.')}</div>
+        <div className="two-columns">{field('maximumDurationSeconds', 'Maximum estimated duration (seconds, optional)', input('maximumDurationSeconds', 'e.g. 120', true))}{field('preference', 'Planning preference', <select id="preference" value={fields.preference} onChange={event => update('preference', event.target.value as RequestFields['preference'])}><option value="cost">Lowest known cost</option><option value="speed">Fastest known duration</option><option value="output">Highest output</option></select>)}</div>
         <label className="checkbox-label" htmlFor="allowWrapped"><input id="allowWrapped" type="checkbox" checked={fields.allowWrapped} onChange={event => update('allowWrapped', event.target.checked)} aria-describedby="wrapped-help" /><span>Allow a wrapped destination token</span></label><small id="wrapped-help">A wrapped token represents an asset through another contract. It can have different redemption steps and risks. The selected destination asset is your preference; future plans must identify any wrapped alternative precisely.</small>
       </div>
       <div className="form-footer"><span className="muted">Reviewing a request does not sign or send anything.</span><button type="submit">Review request <span aria-hidden="true">→</span></button></div>

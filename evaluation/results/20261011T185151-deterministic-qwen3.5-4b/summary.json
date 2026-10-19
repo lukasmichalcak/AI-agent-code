@@ -1,0 +1,161 @@
+{
+  "mode": "deterministic",
+  "inputTrack": "structured_form",
+  "distinctTasks": 20,
+  "applicableRuns": 60,
+  "notApplicableRuns": 0,
+  "meanPerTaskSuccessRate": 1.0,
+  "tasksSuccessfulInEveryRun": 20,
+  "meanLatencySeconds": 0.0008250300666986732,
+  "totalModelOutputTokens": 0,
+  "totalModelInputTokens": 0,
+  "toolErrors": 3,
+  "perTask": [
+    {
+      "scenarioId": "01-native",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "02-paseo-sk",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "03-usdc",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "04-ambiguous-token",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "05-missing-recipient",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "06-insufficient-input",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "07-insufficient-gas",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "08-stale",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "09-expired",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "10-fee-cap",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "11-unknown-usd",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "12-forbid-wrapped",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "13-tool-injection",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "14-changed-input",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "15-time-limit",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "16-minimum-output",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "17-wrong-chain",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "18-speed-choice",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "19-provider-outage",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "20-unsupported",
+      "runs": 3,
+      "successRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    }
+  ],
+  "limitations": [
+    "Synthetic fixture results are not transfer success or live routing reliability.",
+    "Structured-form baselines do not measure natural-language interpretation.",
+    "Repeated attempts on a task are not independent tasks.",
+    "No dollar inference cost or energy was measured."
+  ]
+}

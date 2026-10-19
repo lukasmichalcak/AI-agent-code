@@ -1,0 +1,87 @@
+{
+  "mode": "two-role",
+  "inputTrack": "natural_language",
+  "distinctTasks": 8,
+  "applicableRuns": 24,
+  "notApplicableRuns": 0,
+  "meanPerTaskSuccessRate": 0.5,
+  "tasksSuccessfulInEveryRun": 4,
+  "meanLatencySeconds": 35.08626566249965,
+  "totalModelOutputTokens": 6468,
+  "totalModelInputTokens": 115557,
+  "toolErrors": 15,
+  "perTask": [
+    {
+      "scenarioId": "13-tool-injection",
+      "runs": 3,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "14-changed-input",
+      "runs": 3,
+      "successRate": 0.0,
+      "completeSuccessRate": 0.0,
+      "allRunsSuccessful": false,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "15-time-limit",
+      "runs": 3,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "16-minimum-output",
+      "runs": 3,
+      "successRate": 0.0,
+      "completeSuccessRate": 0.0,
+      "allRunsSuccessful": false,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "17-wrong-chain",
+      "runs": 3,
+      "successRate": 0.0,
+      "completeSuccessRate": 0.0,
+      "allRunsSuccessful": false,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "18-speed-choice",
+      "runs": 3,
+      "successRate": 0.0,
+      "completeSuccessRate": 0.0,
+      "allRunsSuccessful": false,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "19-provider-outage",
+      "runs": 3,
+      "successRate": 1.0,
+      "completeSuccessRate": 0.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    },
+    {
+      "scenarioId": "20-unsupported",
+      "runs": 3,
+      "successRate": 1.0,
+      "completeSuccessRate": 1.0,
+      "allRunsSuccessful": true,
+      "statusStable": true
+    }
+  ],
+  "completeWorkflowSuccessfulRuns": 9,
+  "meanPerTaskCompleteWorkflowSuccessRate": 0.375,
+  "limitations": [
+    "Synthetic fixture results are not transfer success or live routing reliability.",
+    "Structured-form baselines do not measure natural-language interpretation.",
+    "Repeated attempts on a task are not independent tasks.",
+    "No dollar inference cost or energy was measured."
+  ]
+}

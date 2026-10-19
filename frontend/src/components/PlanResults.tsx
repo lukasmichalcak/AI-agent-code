@@ -6,7 +6,7 @@ function CandidateCard({ candidate }: { candidate: RouteCandidate }) {
     <article className="candidate">
       <div className="section-top">
         <h3>{candidate.provider}</h3>
-        <span className="badge">Estimate</span>
+        <span className="badge">{candidate.provenance === 'fixture' ? 'Synthetic fixture' : 'Live estimate'}</span>
       </div>
       <p>Input: <strong>{candidate.sourceInput.amount} {candidate.sourceInput.asset.symbol}</strong></p>
       <p>Expected output: <strong>{candidate.expectedOutput.amount} {candidate.expectedOutput.asset.symbol}</strong></p>
@@ -16,7 +16,7 @@ function CandidateCard({ candidate }: { candidate: RouteCandidate }) {
       <p>Total user cost: {candidate.totalUserCostUsd !== undefined
         ? `$${candidate.totalUserCostUsd} USD (estimated)`
         : 'Not provided; cannot compare total cost yet'}</p>
-      <h4>Fees</h4>
+      <p>Minimum output: {candidate.minimumOutput ? `${candidate.minimumOutput.amount} ${candidate.minimumOutput.asset.symbol}` : 'Unknown'}</p><p>Duration: {candidate.estimatedDurationSeconds === undefined ? 'Unknown' : `${candidate.estimatedDurationSeconds} seconds (estimate)`}</p><h4>Fees</h4>
       {candidate.fees.length ? (
         <ul>{candidate.fees.map((fee, index) => (
           <li key={index}>
@@ -58,8 +58,8 @@ export function PlanResults({ candidates }: { candidates: RouteCandidate[] }) {
       {candidates.length === 0 ? (
         <div className="empty-state">
           <span className="empty-icon" aria-hidden="true">⇄</span>
-          <h3>Planning integration pending</h3>
-          <p>A future planning service will query ParaSpell, LI.FI, and Wormhole. Validated quotes will appear here for comparison against your constraints.</p>
+          <h3>No candidates yet</h3>
+          <p>Review a request, then request read-only plans. Provider failures and constraint violations appear above.</p>
           <div className="provider-tags"><span>ParaSpell</span><span>LI.FI</span><span>Wormhole</span></div>
           <small>No routes, output estimates, or fees have been requested.</small>
         </div>

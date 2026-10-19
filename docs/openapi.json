@@ -1,0 +1,538 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Thesis read-only interoperability router",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/plan": {
+      "post": {
+        "summary": "Plan",
+        "operationId": "plan_api_plan_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/chat": {
+      "post": {
+        "summary": "Chat",
+        "operationId": "chat_api_chat_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Asset": {
+        "properties": {
+          "chain": {
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/EvmChain"
+              },
+              {
+                "$ref": "#/components/schemas/SubstrateChain"
+              }
+            ],
+            "title": "Chain",
+            "discriminator": {
+              "propertyName": "ecosystem",
+              "mapping": {
+                "evm": "#/components/schemas/EvmChain",
+                "substrate": "#/components/schemas/SubstrateChain"
+              }
+            }
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "native",
+              "erc20",
+              "substrate"
+            ],
+            "title": "Kind"
+          },
+          "symbol": {
+            "type": "string",
+            "maxLength": 30,
+            "minLength": 1,
+            "title": "Symbol"
+          },
+          "decimals": {
+            "type": "integer",
+            "maximum": 255.0,
+            "minimum": 0.0,
+            "title": "Decimals"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^0x[0-9a-fA-F]{40}$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "assetIdentifier": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Assetidentifier"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "chain",
+          "kind",
+          "symbol",
+          "decimals"
+        ],
+        "title": "Asset"
+      },
+      "ChatRequest": {
+        "properties": {
+          "message": {
+            "type": "string",
+            "maxLength": 10000,
+            "minLength": 1,
+            "title": "Message"
+          },
+          "history": {
+            "items": {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            "type": "array",
+            "maxItems": 20,
+            "title": "History"
+          },
+          "wallets": {
+            "items": {
+              "$ref": "#/components/schemas/Wallet"
+            },
+            "type": "array",
+            "title": "Wallets"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "single-agent",
+              "two-role"
+            ],
+            "title": "Mode",
+            "default": "two-role"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "title": "ChatRequest"
+      },
+      "Constraints": {
+        "properties": {
+          "maximumFeeUsd": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100,
+                "pattern": "^\\d+(\\.\\d+)?$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maximumfeeusd"
+          },
+          "minimumReceived": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 100,
+                "pattern": "^\\d+(\\.\\d+)?$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Minimumreceived"
+          },
+          "allowWrapped": {
+            "type": "boolean",
+            "title": "Allowwrapped",
+            "default": false
+          },
+          "maximumDurationSeconds": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "exclusiveMinimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Maximumdurationseconds"
+          },
+          "preference": {
+            "type": "string",
+            "enum": [
+              "cost",
+              "speed",
+              "output"
+            ],
+            "title": "Preference",
+            "default": "cost"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "Constraints"
+      },
+      "EvmChain": {
+        "properties": {
+          "ecosystem": {
+            "type": "string",
+            "const": "evm",
+            "title": "Ecosystem"
+          },
+          "chainId": {
+            "type": "integer",
+            "exclusiveMinimum": 0.0,
+            "title": "Chainid"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ecosystem",
+          "chainId"
+        ],
+        "title": "EvmChain"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "Intent": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Id"
+          },
+          "naturalLanguage": {
+            "type": "string",
+            "maxLength": 10000,
+            "title": "Naturallanguage",
+            "default": ""
+          },
+          "sourceAsset": {
+            "$ref": "#/components/schemas/Asset"
+          },
+          "destinationAsset": {
+            "$ref": "#/components/schemas/Asset"
+          },
+          "amount": {
+            "type": "string",
+            "maxLength": 100,
+            "pattern": "^\\d+(\\.\\d+)?$",
+            "title": "Amount"
+          },
+          "recipient": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Recipient"
+          },
+          "constraints": {
+            "$ref": "#/components/schemas/Constraints"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "sourceAsset",
+          "destinationAsset",
+          "amount",
+          "recipient"
+        ],
+        "title": "Intent"
+      },
+      "PlanRequest": {
+        "properties": {
+          "intent": {
+            "$ref": "#/components/schemas/Intent"
+          },
+          "wallets": {
+            "items": {
+              "$ref": "#/components/schemas/Wallet"
+            },
+            "type": "array",
+            "title": "Wallets"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "deterministic",
+              "single-agent",
+              "two-role"
+            ],
+            "title": "Mode",
+            "default": "deterministic"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "intent"
+        ],
+        "title": "PlanRequest"
+      },
+      "SubstrateChain": {
+        "properties": {
+          "ecosystem": {
+            "type": "string",
+            "const": "substrate",
+            "title": "Ecosystem"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Name"
+          },
+          "genesisHash": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Genesishash"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ecosystem",
+          "name"
+        ],
+        "title": "SubstrateChain"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "Wallet": {
+        "properties": {
+          "ecosystem": {
+            "type": "string",
+            "enum": [
+              "evm",
+              "substrate"
+            ],
+            "title": "Ecosystem"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "chainId": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Chainid"
+          },
+          "genesisHash": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Genesishash"
+          },
+          "connector": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Connector"
+          },
+          "signerAdapter": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Signeradapter"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "disconnected",
+              "connecting",
+              "reconnecting",
+              "connected"
+            ],
+            "title": "Status"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "ecosystem",
+          "status"
+        ],
+        "title": "Wallet"
+      }
+    }
+  }
+}

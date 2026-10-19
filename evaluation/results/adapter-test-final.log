@@ -1,0 +1,17 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> thesis-readonly-adapters@0.1.0 test
+> node --test test/*.test.mjs
+
+✔ worker refuses a balance from a different RPC network (600.274736ms)
+✔ worker returns exact balance units after verifying the network (529.211018ms)
+✔ read-only allowlist blocks signing and unsupported providers (1.367509ms)
+✔ reject mismatched native decimals and unknown chains (0.208899ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1227.314589

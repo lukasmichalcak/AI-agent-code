@@ -1,0 +1,411 @@
+{
+  "$defs": {
+    "Amount": {
+      "additionalProperties": false,
+      "properties": {
+        "asset": {
+          "$ref": "#/$defs/Asset"
+        },
+        "amount": {
+          "maxLength": 100,
+          "pattern": "^\\d+(\\.\\d+)?$",
+          "title": "Amount",
+          "type": "string"
+        }
+      },
+      "required": [
+        "asset",
+        "amount"
+      ],
+      "title": "Amount",
+      "type": "object"
+    },
+    "Asset": {
+      "additionalProperties": false,
+      "properties": {
+        "chain": {
+          "discriminator": {
+            "mapping": {
+              "evm": "#/$defs/EvmChain",
+              "substrate": "#/$defs/SubstrateChain"
+            },
+            "propertyName": "ecosystem"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/EvmChain"
+            },
+            {
+              "$ref": "#/$defs/SubstrateChain"
+            }
+          ],
+          "title": "Chain"
+        },
+        "kind": {
+          "enum": [
+            "native",
+            "erc20",
+            "substrate"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "symbol": {
+          "maxLength": 30,
+          "minLength": 1,
+          "title": "Symbol",
+          "type": "string"
+        },
+        "decimals": {
+          "maximum": 255,
+          "minimum": 0,
+          "title": "Decimals",
+          "type": "integer"
+        },
+        "address": {
+          "anyOf": [
+            {
+              "pattern": "^0x[0-9a-fA-F]{40}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Address"
+        },
+        "assetIdentifier": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Assetidentifier"
+        }
+      },
+      "required": [
+        "chain",
+        "kind",
+        "symbol",
+        "decimals"
+      ],
+      "title": "Asset",
+      "type": "object"
+    },
+    "EvmChain": {
+      "additionalProperties": false,
+      "properties": {
+        "ecosystem": {
+          "const": "evm",
+          "title": "Ecosystem",
+          "type": "string"
+        },
+        "chainId": {
+          "exclusiveMinimum": 0,
+          "title": "Chainid",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "ecosystem",
+        "chainId"
+      ],
+      "title": "EvmChain",
+      "type": "object"
+    },
+    "Fee": {
+      "additionalProperties": false,
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "amount": {
+          "$ref": "#/$defs/Amount"
+        },
+        "includedInInput": {
+          "title": "Includedininput",
+          "type": "boolean"
+        },
+        "estimatedUsd": {
+          "anyOf": [
+            {
+              "maxLength": 100,
+              "pattern": "^\\d+(\\.\\d+)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Estimatedusd"
+        }
+      },
+      "required": [
+        "label",
+        "amount",
+        "includedInInput"
+      ],
+      "title": "Fee",
+      "type": "object"
+    },
+    "Step": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "chain": {
+          "discriminator": {
+            "mapping": {
+              "evm": "#/$defs/EvmChain",
+              "substrate": "#/$defs/SubstrateChain"
+            },
+            "propertyName": "ecosystem"
+          },
+          "oneOf": [
+            {
+              "$ref": "#/$defs/EvmChain"
+            },
+            {
+              "$ref": "#/$defs/SubstrateChain"
+            }
+          ],
+          "title": "Chain"
+        },
+        "action": {
+          "enum": [
+            "approval",
+            "swap",
+            "bridge",
+            "redeem",
+            "transfer"
+          ],
+          "title": "Action",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "description",
+        "chain",
+        "action"
+      ],
+      "title": "Step",
+      "type": "object"
+    },
+    "SubstrateChain": {
+      "additionalProperties": false,
+      "properties": {
+        "ecosystem": {
+          "const": "substrate",
+          "title": "Ecosystem",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 100,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "genesisHash": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Genesishash"
+        }
+      },
+      "required": [
+        "ecosystem",
+        "name"
+      ],
+      "title": "SubstrateChain",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "intentId": {
+      "title": "Intentid",
+      "type": "string"
+    },
+    "provider": {
+      "enum": [
+        "paraspell",
+        "lifi",
+        "wormhole"
+      ],
+      "title": "Provider",
+      "type": "string"
+    },
+    "providerQuoteId": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Providerquoteid"
+    },
+    "sourceAsset": {
+      "$ref": "#/$defs/Asset"
+    },
+    "sourceInput": {
+      "$ref": "#/$defs/Amount"
+    },
+    "destinationAsset": {
+      "$ref": "#/$defs/Asset"
+    },
+    "destinationRepresentation": {
+      "enum": [
+        "native",
+        "wrapped",
+        "canonical",
+        "unknown"
+      ],
+      "title": "Destinationrepresentation",
+      "type": "string"
+    },
+    "expectedOutput": {
+      "$ref": "#/$defs/Amount"
+    },
+    "minimumOutput": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Amount"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "fees": {
+      "items": {
+        "$ref": "#/$defs/Fee"
+      },
+      "title": "Fees",
+      "type": "array"
+    },
+    "gasNeeds": {
+      "items": {
+        "$ref": "#/$defs/Amount"
+      },
+      "title": "Gasneeds",
+      "type": "array"
+    },
+    "totalUserCostUsd": {
+      "anyOf": [
+        {
+          "maxLength": 100,
+          "pattern": "^\\d+(\\.\\d+)?$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Totalusercostusd"
+    },
+    "feeComplete": {
+      "default": false,
+      "title": "Feecomplete",
+      "type": "boolean"
+    },
+    "estimatedDurationSeconds": {
+      "anyOf": [
+        {
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Estimateddurationseconds"
+    },
+    "quotedAt": {
+      "title": "Quotedat",
+      "type": "string"
+    },
+    "expiresAt": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Expiresat"
+    },
+    "warnings": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Warnings",
+      "type": "array"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/$defs/Step"
+      },
+      "title": "Steps",
+      "type": "array"
+    },
+    "provenance": {
+      "enum": [
+        "live",
+        "fixture"
+      ],
+      "title": "Provenance",
+      "type": "string"
+    },
+    "raw": {
+      "additionalProperties": true,
+      "title": "Raw",
+      "type": "object"
+    }
+  },
+  "required": [
+    "id",
+    "intentId",
+    "provider",
+    "sourceAsset",
+    "sourceInput",
+    "destinationAsset",
+    "destinationRepresentation",
+    "expectedOutput",
+    "quotedAt",
+    "provenance"
+  ],
+  "title": "Candidate",
+  "type": "object"
+}
